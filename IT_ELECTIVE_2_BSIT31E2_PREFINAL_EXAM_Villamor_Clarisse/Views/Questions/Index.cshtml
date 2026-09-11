@@ -45,8 +45,11 @@
 
 
 <div class="Question">
-    <h2 class="Qtitle">"5. What does the following command primarily do? 
-        dotnet ef dbcontext scaffold "ConnectionString" Microsoft.EntityFrameworkCore.SqlServer -o Models"</h2>
+    <h2 class="Qtitle">"5. What does the following command primarily do?"</h2>
+
+    <h2 class="Qtitle">
+        dotnet ef dbcontext scaffold "ConnectionString" Microsoft.EntityFrameworkCore.SqlServer -o Models
+    </h2>
     <br />
 
     <p class="Answer">ANSWER: C</p>
@@ -68,6 +71,25 @@
 <div class="Question">
     <h2 class="Qtitle">
         "7. A Student belongs to exactly one Section, while a Section can contain many students. What type of relationship is this?"
+    </h2>
+    <br />
+
+    <p class="Answer">ANSWER: B</p>
+</div>
+
+
+  public Section Section { get; set; }
+
+
+<div class="Question">
+    <h2 class="Qtitle">
+        "8. In the following example, what is SectionId?"
+    </h2>
+    <h2 class="Qtitle">
+        public int SectionId { get; set; }
+    </h2>
+    <h2 class="Qtitle">
+        public Section Section { get; set; }
     </h2>
     <br />
 
