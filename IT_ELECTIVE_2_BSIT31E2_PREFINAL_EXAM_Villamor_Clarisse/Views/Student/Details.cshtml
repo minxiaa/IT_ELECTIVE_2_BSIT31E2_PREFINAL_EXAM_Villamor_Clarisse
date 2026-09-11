@@ -1,0 +1,31 @@
+﻿@model IT_ELECTIVE_2_BSIT31E2_PREFINAL_EXAM_Villamor_Clarisse.Models.Student
+<body class="container">
+<h1 class="Title">Student Details</h1>
+
+<div class="card">
+    <div class="card-body">
+
+        <h4>  
+            @Model.FirstName @Model.LastName
+        </h4>
+
+        <p>
+            <strong>Student Number:</strong>
+            @Model.StudentNumber
+        </p>
+
+        <p>
+            <strong>Section:</strong>
+            @Model.Section?.SectionName
+        </p>
+
+        
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Back
+        </a>
+
+    </div>
+</div>
+
+</body>

@@ -1,0 +1,120 @@
+﻿@model List<IT_ELECTIVE_2_BSIT31E2_PREFINAL_EXAM_Villamor_Clarisse.Models.Student>
+
+
+@if (!Model.Any())
+{
+    <div id="scary-overlay"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const overlay = document.getElementById("scary-overlay");
+            overlay.style.display = "block";
+
+            
+        });
+    </script>
+}
+else
+{
+    
+
+
+<body class="container">
+
+
+<h1 class="Title">List of Students</h1>
+
+    <a asp-action="Create" class="btn btn-primary">
+        <img src="~/images/user icon.png" alt="Add" class="icon" />
+    + Add Student
+</a>
+
+<table class="custom-table">
+    <thead>
+        <tr>
+            <th>Student Number</th>
+            <th>Name</th>
+            <th>Section</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.StudentNumber</td>
+
+                <td>
+                    @student.FirstName @student.LastName
+                </td>
+
+                <td>
+                    @student.Section?.SectionName
+                </td>
+
+                <td>
+                    <a asp-action="Details"
+                       asp-route-id="@student.StudentId"
+                       class="btn btn-secondary">
+                        Details
+                    </a>
+
+                    <a asp-action="Edit"
+                       asp-route-id="@student.StudentId"
+                           class="btn btn-warning">
+                            <img src="~/images/edit.png" alt="Edit" class="icon" />
+                        Edit
+                    </a>
+
+                        <a asp-action="Delete"
+                           asp-route-id="@student.StudentId"
+                           class="btn btn-danger delete-btn">
+                            <img src="~/images/trash.png" alt="Delete" class="icon" />
+                            Delete
+                        </a>
+
+                        <script>
+                                                document.addEventListener("DOMContentLoaded", function () {
+                                                    const deleteButtons = document.querySelectorAll(".delete-btn");
+
+                                                    deleteButtons.forEach(btn => {
+                                                        btn.addEventListener("click", function (e) {
+                                                            e.preventDefault(); 
+
+                                                            
+                                                            const scare = document.createElement("div");
+                                                            scare.style.position = "fixed";
+                                                            scare.style.top = "0";
+                                                            scare.style.left = "0";
+                                                            scare.style.width = "100%";
+                                                            scare.style.height = "100%";
+                                                            scare.style.background = "black url('/images/jumpscare.png') center/contain no-repeat";
+                                                            scare.style.zIndex = "9999";
+
+                                                            document.body.appendChild(scare);
+
+                                                          
+                                                            setTimeout(() => {
+                                                                window.location.href = btn.href;
+                                                            }, 2000);
+                                                        });
+                                                    });
+                                                });
+                        </script>
+
+
+
+                       
+
+
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+</body>
+}

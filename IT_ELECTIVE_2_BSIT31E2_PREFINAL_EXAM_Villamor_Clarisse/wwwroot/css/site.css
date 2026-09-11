@@ -1,0 +1,209 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.container {
+    background: linear-gradient(180deg, #deedf4, #c8d1ff);
+}
+
+.Title {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 10px;
+    background: linear-gradient(180deg, #1b1f22, #8b8bc6);
+    color: white;
+    padding: 20px;
+}
+
+.Title {
+    position: relative;
+}
+
+.Title:hover {
+    color: transparent;
+    text-align: left;
+}
+
+.Title:hover::after {
+    content: "Hello... :)";
+    color: red;
+    position: absolute;
+    right: 300px;
+    background: linear-gradient(180deg, #3d0e0e, #c62828);
+    
+}
+
+.Title2 {
+    position: relative;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 10px;
+    background: linear-gradient(180deg, #3d0e0e, #c62828);
+    color: red;
+    padding: 20px;
+}
+
+.Title2:hover {
+    color: transparent;
+    text-align: left;
+}
+
+.Title2:hover::after {
+    content: "Hello... :)";
+    color: red;
+    position: absolute;
+    right: 300px;
+    background: linear-gradient(180deg, #3d0e0e, #c62828);
+    
+}
+
+.card, .card-body {
+    background-color: #000 !important;
+    color: #eee !important; 
+    border: none;
+}
+
+.container2 {
+    background-color: #000;
+    min-height: 100vh;
+    color: #eee;
+}
+
+.card {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); 
+}
+
+
+.ominous {
+    letter-spacing: 20px;
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    background-color: black;
+    padding: 20px
+}
+
+.custom-table {
+    padding: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, sans-serif; 
+    font-size: 14px;
+    background: linear-gradient(to right, #fdfbfb, #ebedee); 
+}
+
+
+.custom-table th {
+    background-color: #8b8bc6; 
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-family:Arial;
+}
+
+
+.custom-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+
+.custom-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.custom-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.custom-table tr {
+    transition: background-color 0.4s ease;
+}
+
+.custom-table tr:hover {
+    background-color: #dbdbff;
+}
+
+.btn-primary {
+    background-color: whitesmoke;
+    color: gray;
+    border-color: dimgray;
+    margin-bottom: 10px;
+    transition: background-color 0.4s ease;
+}
+
+.btn-primary:hover{
+    background-color: white;
+    color: lightblue;
+}
+
+.btn-danger {
+    background-color: #5a55ab;
+    border-color: #5a55ac;
+}
+
+.btn-danger:hover{
+    background-color: #3e4183;
+    border-color: #292a61;
+    
+}
+
+.btn-warning {
+    background-color: #7a93c4;
+    border-color: #5a55ac;
+}
+
+    .btn-warning:hover {
+        background-color: #5974ad;
+        border-color: #4a5092;
+        
+    }
+
+.icon {
+    max-height: 20px;
+    transition: opacity 0.4s ease;
+}
+
+.icon:hover{
+    opacity: 20%;
+}
+
+#scary-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black url('/images/gameover.png') center/contain no-repeat;
+    z-index: 9999;
+}
+
