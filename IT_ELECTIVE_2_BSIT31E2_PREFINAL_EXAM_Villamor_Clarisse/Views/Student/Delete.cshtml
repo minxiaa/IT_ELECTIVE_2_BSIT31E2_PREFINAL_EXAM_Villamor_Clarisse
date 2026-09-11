@@ -78,6 +78,8 @@
 
                                         document.body.appendChild(scare);
 
+                                        const scream = new Audio("/sounds/scream.mp3"); 
+                                        scream.play();
                                        
                                         setTimeout(() => {
                                             btn.closest("form").submit();

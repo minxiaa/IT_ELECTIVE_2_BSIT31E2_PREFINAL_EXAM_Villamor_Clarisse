@@ -207,3 +207,30 @@ body {
     z-index: 9999;
 }
 
+#scary-overlay.show {
+    opacity: 1;
+}
+
+
+.Question{
+    padding-top: 30px;
+    background-color: aliceblue;
+    margin-bottom: 50px;
+}
+
+.Qtitle{
+    color: #9f7cce;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-family:Arial;
+}
+
+.Answer {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #d5aaff;
+    font-weight: bold;
+    box-shadow: 0 0 20px #d8b3ff;
+}

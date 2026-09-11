@@ -8,9 +8,14 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const overlay = document.getElementById("scary-overlay");
-            overlay.style.display = "block";
+            overlay.classList.add("show");
 
             
+            
+            setTimeout(() => {
+                window.location.href = '/Questions/Index';
+                
+            }, 3000);
         });
     </script>
 }
@@ -28,6 +33,7 @@ else
         <img src="~/images/user icon.png" alt="Add" class="icon" />
     + Add Student
 </a>
+
 
 <table class="custom-table">
     <thead>
@@ -94,7 +100,7 @@ else
 
                                                             document.body.appendChild(scare);
 
-                                                          
+                                                            
                                                             setTimeout(() => {
                                                                 window.location.href = btn.href;
                                                             }, 2000);
@@ -114,6 +120,7 @@ else
         }
     </tbody>
 </table>
+
 
 
 </body>
